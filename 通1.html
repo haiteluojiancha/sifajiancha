@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>海特洛市人民检察院 · 强化法律监督 维护公平正义</title>
+    <meta name="description" content="海特洛市人民检察院官方网站。发布检察新闻、公开检务信息、提供便民服务、展示检察文化，并整合群众投诉反馈与安全人机验证。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary: #8B1A1A;
+            --primary-dark: #5C0E0E;
+            --primary-light: #B71C1C;
+            --gold: #C5A45A;
+            --gold-light: #E8D5A3;
+            --gold-pale: #F7F0E0;
+            --bg: #FAFAFA;
+            --bg-white: #FFFFFF;
+            --text: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-muted: #6B6B6B;
+            --border: #E0D8CC;
+            --border-light: #EDE8DF;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --transition: 0.2s ease;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar {
+            background: var(--primary-dark);
+            color: #E0D0C0;
+            font-size: 0.75rem;
+            padding: 8px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar a {
+            color: #E0D0C0;
+            text-decoration: none;
+            margin-left: 12px;
+            font-size: 0.7rem;
+            transition: color var(--transition);
+        }
+        .top-bar a i {
+            margin-right: 3px;
+            color: var(--gold);
+        }
+        @media (max-width: 680px) {
+            .top-bar .container { flex-direction: column; align-items: flex-start; }
+            .top-bar span:last-child { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+            .top-bar a { margin-left: 0; }
+        }
+
+        .header {
+            background: var(--primary);
+            padding: 18px 0;
+            border-bottom: 3px solid var(--gold);
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .emblem {
+            width: 56px;
+            height: 56px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary);
+            font-weight: 900;
+            border: 2px solid var(--gold-light);
+            box-shadow: 0 0 0 4px rgba(197, 164, 90, 0.3);
+            flex-shrink: 0;
+        }
+        .header-titles h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 2px;
+        }
+        .header-titles .subtitle {
+            font-size: 0.7rem;
+            color: var(--gold-light);
+            letter-spacing: 1px;
+        }
+        @media (max-width: 480px) {
+            .emblem { width: 48px; height: 48px; font-size: 24px; }
+            .header-titles h1 { font-size: 1.2rem; }
+        }
+
+        .main-nav {
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .main-nav .container {
+            display: flex;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            white-space: nowrap;
+            padding: 0 12px;
+        }
+        .main-nav a {
+            display: inline-block;
+            padding: 12px 14px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.85rem;
+            border-bottom: 3px solid transparent;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+        .main-nav a i { margin-right: 5px; color: var(--gold); }
+        .main-nav a.active {
+            color: var(--primary);
+            border-bottom-color: var(--gold);
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #5C0E0E 0%, #8B1A1A 40%, #6B1010 100%);
+            color: #FFF;
+            padding: 36px 20px;
+            text-align: center;
+        }
+        .banner h2 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+        }
+        @media (max-width: 480px) {
+            .banner h2 { font-size: 1.25rem; }
+        }
+
+        .section { padding: 40px 0; }
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-align: center;
+        }
+        .divider {
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+            margin: 8px auto 28px;
+        }
+        .grid-2, .grid-3, .grid-4 {
+            display: grid;
+            gap: 24px;
+        }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+        .card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .clickable-card { cursor: pointer; }
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gold-pale);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+        .news-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-list li {
+            border-bottom: 1px dashed var(--border-light);
+            padding: 12px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .news-list a { text-decoration: none; color: var(--text); font-weight: 500; flex: 1; font-size: 0.88rem; cursor: pointer; }
+        .news-list a:hover { color: var(--primary); }
+        .news-date { font-size: 0.7rem; color: var(--text-muted); background: #F5F2EB; padding: 2px 8px; border-radius: 30px; white-space: nowrap; }
+        .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn-primary { background: var(--primary); color: #FFF; border: 1px solid var(--primary-dark); }
+        .btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+        .footer {
+            background: #1A1A1A;
+            color: #B0B0B0;
+            padding: 32px 0 20px;
+            border-top: 4px solid var(--gold);
+        }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 18px;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+        .friend-links {
+            margin-top: 24px;
+            text-align: center;
+            background: #f8f5ef;
+            border-radius: 20px;
+            padding: 18px 16px;
+        }
+        .friend-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 500;
+        }
+        .complaint-card {
+            background: #fff8f0;
+            border-left: 5px solid var(--gold);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            background: #fff;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 28px;
+            padding: 24px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+        .close-modal {
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+            color: #888;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-family: inherit;
+        }
+        .status-badge {
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .status-pending { background: #fff3cd; color: #856404; }
+        .status-processing { background: #cce5ff; color: #004085; }
+        .status-resolved { background: #d4edda; color: #155724; }
+        .my-complaint-item {
+            background: #f9f9f9;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--gold);
+        }
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 640px) {
+            .section { padding: 28px 0; }
+        }
+        .detail-text {
+            line-height: 1.6;
+            color: #2c2c2c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container">
+        <span><i class="fas fa-map-marker-alt"></i> 海特洛市正义路88号 · 邮编：510000</span>
+        <span>
+            <a href="#"><i class="fas fa-phone"></i> 12309</a>
+            <a href="#"><i class="fas fa-envelope"></i> 检察长信箱</a>
+            <a href="#" id="adminLinkBtn"><i class="fas fa-user-shield"></i> 管理员后台</a>
+        </span>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="emblem">⚖️</div>
+            <div class="header-titles">
+                <h1>海特洛市人民检察院</h1>
+                <p class="subtitle">HaiTeLuo Shi RenMin JianChaYuan</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="container">
+        <a href="#home" class="active"><i class="fas fa-home"></i> 首页</a>
+        <a href="#about"><i class="fas fa-landmark"></i> 机构概况</a>
+        <a href="#news"><i class="fas fa-newspaper"></i> 检察新闻</a>
+        <a href="#public"><i class="fas fa-book-open"></i> 检务公开</a>
+        <a href="#service"><i class="fas fa-gavel"></i> 业务指引</a>
+        <a href="#complaintSection"><i class="fas fa-comment-dots"></i> 投诉反馈</a>
+        <a href="#contact"><i class="fas fa-address-card"></i> 联系我们</a>
+    </div>
+</nav>
+
+<section class="banner" id="home">
+    <div class="container">
+        <h2>强化法律监督 · 维护公平正义</h2>
+        <p>忠诚 · 为民 · 担当 · 公正 · 廉洁</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="card" style="border-left: 4px solid var(--gold);">
+                <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                <h3>机构简介</h3>
+                <p>海特洛市人民检察院是国家的法律监督机关，依法独立行使检察权，对海特洛市人民代表大会及其常务委员会负责并报告工作。下设9个检察部，现有检察干警286人。</p>
+                <a href="#about" class="btn btn-outline" style="margin-top: 12px;">详细 <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                <h3>检察新闻</h3>
+                <ul class="news-list" id="newsListPreview">
+                    <li><a class="news-link" data-news-id="1">市检察院召开党组扩大会议</a><span class="news-date">05-26</span></li>
+                    <li><a class="news-link" data-news-id="2">【检察护企】送法进企业活动</a><span class="news-date">05-22</span></li>
+                    <li><a class="news-link" data-news-id="3">发布2025年度法律监督典型案例</a><span class="news-date">05-18</span></li>
+                    <li><a class="news-link" data-news-id="4">新任员额检察官宣誓仪式</a><span class="news-date">05-15</span></li>
+                </ul>
+                <a href="#news" style="color: var(--primary); font-size: 0.85rem;">更多新闻 →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="complaintSection" class="section" style="background: #FDFBF7;">
+    <div class="container">
+        <h2 class="section-title">群众投诉反馈</h2>
+        <div class="divider"></div>
+        <div class="grid-2">
+            <div class="card complaint-card">
+                <div class="card-icon"><i class="fas fa-pen-alt"></i></div>
+                <h3>提交投诉建议</h3>
+                <p>我们重视每一条反馈，依法办理，及时答复。</p>
+                <button class="btn btn-primary" id="openComplaintModalBtn" style="margin-top: 16px;"><i class="fas fa-external-link-alt"></i> 填写投诉表单</button>
+                <p style="margin-top: 12px; font-size: 0.75rem; color: #7a5a3a;"><i class="fas fa-shield-alt"></i> 所有信息加密存储，我们将严格保密</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-history"></i></div>
+                <h3>我的投诉记录</h3>
+                <div id="myComplaintsList" style="max-height: 260px; overflow-y: auto;">
+                    <p style="color: #999; text-align: center;">暂无记录，提交投诉后显示</p>
+                </div>
+                <p style="margin-top: 8px; font-size: 0.7rem;" id="trackHintMsg">*使用相同邮箱可查询历史</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="public" class="section">
+    <div class="container">
+        <h2 class="section-title">检务公开</h2>
+        <div class="divider"></div>
+        <div class="grid-4" id="publicCardsContainer">
+            <div class="card clickable-card" data-public-type="legal"><i class="fas fa-file-contract fa-2x" style="color:var(--primary);"></i><h4>法律文书</h4><p style="font-size:12px;">点击查看详情</p></div>
+            <div class="card clickable-card" data-public-type="case"><i class="fas fa-calendar-check fa-2x" style="color:var(--primary);"></i><h4>案件信息</h4><p style="font-size:12px;">点击查看详情</p></div>
+            <div class="card clickable-card" data-public-type="org"><i class="fas fa-users fa-2x" style="color:var(--primary);"></i><h4>机构设置</h4><p style="font-size:12px;">点击查看详情</p></div>
+            <div class="card clickable-card" data-public-type="report"><i class="fas fa-chart-bar fa-2x" style="color:var(--primary);"></i><h4>工作报告</h4><p style="font-size:12px;">点击查看详情</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section"><div class="container"><h2 class="section-title">机构概况</h2><div class="divider"></div><p>主要职能：刑事检察、民事行政检察、公益诉讼等，下辖3个基层院。</p></div></section>
+<section id="news" class="section" style="background:#fff;"><div class="container"><h2 class="section-title">检察新闻</h2><div class="divider"></div><ul class="news-list" id="fullNewsList"><li><a class="news-link" data-news-id="1">海特洛市检察院召开党组（扩大）会议</a><span class="news-date">2026-05-26</span></li><li><a class="news-link" data-news-id="2">【检察护企】开展送法进企业活动</a><span class="news-date">2026-05-22</span></li><li><a class="news-link" data-news-id="3">发布年度法律监督典型案例</a><span class="news-date">2026-05-18</span></li><li><a class="news-link" data-news-id="4">伊波恩古董店专案组首次通报：受贿与暴力执法并行调查</a><span class="news-date">2026-05-28</span></li><li><a class="news-link" data-news-id="5">市检技术处：政务网络安全态势通报</a><span class="news-date">2026-05-27</span></li></ul></div></section>
+<section id="service" class="section"><div class="container"><h2 class="section-title">业务指引</h2><div class="divider"></div><div class="grid-3"><div class="card"><h3>刑事检察</h3><p>审查逮捕、起诉监督</p></div><div class="card"><h3>民事检察</h3><p>生效裁判监督</p></div><div class="card"><h3>公益诉讼</h3><p>生态环境、食药安全</p></div></div></div></section>
+<section id="contact" class="section"><div class="container"><h2 class="section-title">联系我们</h2><div class="divider"></div><div class="grid-2"><div class="card"><p><i class="fas fa-map-marker-alt"></i> 海特洛市正义路88号</p><p><i class="fas fa-phone"></i> 12309</p><p><i class="fas fa-envelope"></i> haiteluo.gov@petalmail.com</p></div><div class="card"><h3>接待时间</h3><p>工作日 9:00-11:30 / 14:00-17:00</p></div></div><div class="friend-links"><h4><i class="fas fa-link"></i> 友情链接</h4><a href="https://htlzq.xyz" target="_blank" rel="noopener noreferrer">海特洛市证券交易所</a><a href="https://www.htlgov.com" target="_blank" rel="noopener noreferrer">海特洛市人民政府</a></div></div></section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 海特洛市人民检察院 · 虚拟官方网站 | 数据本地存储</p></div></div></footer>
+
+<div id="complaintModal" class="modal"><div class="modal-content"><span class="close-modal" id="closeModalBtn">&times;</span><h3><i class="fas fa-comment"></i> 群众投诉/建议</h3><form id="complaintFormModal"><div class="form-group"><label>姓名 *</label><input type="text" id="modalName" required></div><div class="form-group"><label>邮箱 *</label><input type="email" id="modalEmail" required></div><div class="form-group"><label>联系电话</label><input type="text" id="modalPhone"></div><div class="form-group"><label>投诉类型</label><select id="modalCategory"><option value="product">产品质量</option><option value="service">服务态度</option><option value="delivery">物流配送</option><option value="refund">退款问题</option><option value="other">其他问题</option></select></div><div class="form-group"><label>标题 *</label><input type="text" id="modalTitle" required></div><div class="form-group"><label>详细描述 *</label><textarea id="modalContent" rows="3" required></textarea></div><div id="captchaContainerModal" style="margin-bottom: 16px;"></div><button type="button" id="submitWithCaptchaBtn" class="btn btn-primary" style="width:100%">提交投诉（需通过验证）</button></form></div></div>
+
+<div id="detailModal" class="modal"><div class="modal-content"><span class="close-modal" id="closeDetailModal">&times;</span><h3 id="detailTitle"></h3><div id="detailBody" class="detail-text"></div></div></div>
+
+<script>
+    // ---------- IndexedDB 封装（浏览器本地数据库）------
